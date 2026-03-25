@@ -22,7 +22,7 @@ public class SecurityConfig {
             csrf.disable();
         });
         http.authorizeHttpRequests(auth -> {
-            auth.requestMatchers("/auth/**").permitAll();
+            auth.requestMatchers("/usuarios/**").permitAll();
             auth.requestMatchers(HttpMethod.GET, "/telefono").permitAll();
             auth.anyRequest().authenticated();
         });
